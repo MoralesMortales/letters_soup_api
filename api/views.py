@@ -1,9 +1,10 @@
+
 from rest_framework import viewsets
-from .serializer import ProgrammerSerializer
-from .models import Programmer
+from .models import User_app
+from .serializer import UserSerializer
+from rest_framework.response import Response
+from rest_framework.exceptions import NotFound
 
-# Create your views here.
-
-class ProgrammerViewSet(viewsets.ModelViewSet):
-    queryset = Programmer.objects.all()
-    serializer_class = ProgrammerSerializer
+class UserViewSet(viewsets.ModelViewSet):
+    queryset = User_app.objects.all()
+    serializer_class = UserSerializer

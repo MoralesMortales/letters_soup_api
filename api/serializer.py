@@ -1,8 +1,8 @@
 from rest_framework import serializers
-from .models import Programmer
+from .models import * 
 
-class ProgrammerSerializer(serializers.ModelSerializer):
+class UserSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Programmer
-        #fields = ('fullname', 'nickname')
+        model = User_app 
         fields = '__all__'
+
