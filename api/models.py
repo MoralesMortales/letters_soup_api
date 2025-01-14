@@ -11,8 +11,10 @@ class User_app(models.Model):
 
 class Word(models.Model): 
     length = models.IntegerField()  
-    x = models.IntegerField()  
-    y = models.IntegerField()  
+    xi = models.IntegerField()  
+    yi = models.IntegerField() 
+    xf = models.IntegerField()  
+    yf = models.IntegerField()
     word = models.CharField(max_length=20)
 
     def __str__(self):
