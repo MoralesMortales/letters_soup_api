@@ -17,4 +17,4 @@ class UserSerializer(serializers.ModelSerializer):
 class SoupSerializer(serializers.ModelSerializer):
     class Meta:
         model = Soup
-        fields = '__all__'
+        fields = ['id', 'email', 'row', 'col', 'soup', 'words']
