@@ -68,8 +68,12 @@ WSGI_APPLICATION = 'drf.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'so_db',        # Nombre de tu base de datos
+        'USER': 'postgres',              # Tu usuario de PostgreSQL
+        'PASSWORD': 'Alfabeto624',       # Contraseña de tu usuario
+        'HOST': 'localhost',               # Host (usualmente localhost)
+        'PORT': '5432',                    # Puerto por defecto de PostgreSQL
     }
 }
 
