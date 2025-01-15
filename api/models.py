@@ -19,3 +19,5 @@ class Soup(models.Model):
 
     def __str__(self):
         return f"Sopa de {self.email}"
+
+
