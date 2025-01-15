@@ -9,5 +9,6 @@ router.register(r'users', views.UserViewSet)
 urlpatterns = [
     path('', include(router.urls)),
     path('create/', views.UserCreateView.as_view(), name='user-create'),
+    path('create-soup/', views.SoupCreateView.as_view(), name='create-soup'),
 
 ]
