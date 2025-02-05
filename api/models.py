@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.postgres.fields import ArrayField
 
 class User_app(models.Model):
     id = models.AutoField(primary_key=True)
@@ -9,23 +10,13 @@ class User_app(models.Model):
     def __str__(self):
         return self.email
 
-class Word(models.Model): 
-    length = models.IntegerField()  
-    xi = models.IntegerField()  
-    yi = models.IntegerField() 
-    xf = models.IntegerField()  
-    yf = models.IntegerField()
-    word = models.CharField(max_length=20)
-
-    def __str__(self):
-        return self.word
-
 class Soup(models.Model): 
     email = models.ForeignKey(User_app, on_delete=models.CASCADE)  
     row = models.PositiveIntegerField()  
     col = models.PositiveIntegerField()  
-    letters = models.CharField(max_length=500) 
-    words = models.ManyToManyField(Word)
+    soup = models.CharField(max_length=500) 
+    words = ArrayField(models.CharField(max_length=500))
 
     def __str__(self):
         return f"Sopa de {self.email}"
+
