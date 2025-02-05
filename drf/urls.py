@@ -6,7 +6,7 @@ from api.views import UserCreateView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/v1/', include('api.urls')),  # Accede a la URL base para usuarios
+    path('api/v1/', include('api.urls')),
 
 ]
 
